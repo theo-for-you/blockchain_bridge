@@ -461,8 +461,13 @@ const pl_token_contract = new Contract(pl, new pl.eth.Contract(token_abi, pl_tok
 const bsc_token_contract = new Contract(bsc, new bsc.eth.Contract(token_abi, bsc_token_addr), bsc_token_addr)
 
 
-// check_balance(pl_bridge, pl_bridge_addr, pl_token, bsc_bridge)
-check_balance(bsc_bridge_contract, bsc_token_contract, pl_bridge_contract)
+setInterval(scan_all, 5000);
+
+function scan_all() {
+    check_balance(bsc_bridge_contract, bsc_token_contract, pl_bridge_contract)
+    check_balance(pl_bridge_contract, pl_token_contract, bsc_bridge_contract)
+}
+
 
 
 function count_unsend(from_me, to_me) {
