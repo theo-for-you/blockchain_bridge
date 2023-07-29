@@ -437,6 +437,7 @@ const token_abi = [
 const bsc = new Web3.Web3("http://127.0.0.1:8545");
 const pl = new Web3.Web3("http://127.0.0.1:8546");
 
+const priv = ""; // Your key here
 const addr = Web3.eth.accounts.privateKeyToAddress(priv)
 
 
