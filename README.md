@@ -22,5 +22,6 @@ Transfers a fixed amount of token from a client on one blockchain from a listene
 
 ## Todo
  - Add more data to the interfce (tx time, bridge amount, current address)
- - Add fees to the listeners 
+ - Add fees to the listeners
+ - Private key file
 
