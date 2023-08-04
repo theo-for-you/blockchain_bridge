@@ -1,3 +1,4 @@
+
 # A blockchain bridge
 Transfers a fixed amount of token from a client on one blockchain from a listener on another
 
@@ -12,7 +13,15 @@ Transfers a fixed amount of token from a client on one blockchain from a listene
 ## How to listen
  1. Install Web3 using npm
  2. Add your private key in the bridge.node.js file
- 3. Launch the file using Nodejs 
+ 3. Launch the file using Nodejs
+
+## Contract interface
+
+ - **deposit**(uint) adds tokens to your balance (required for a listener)
+ - **send_from_balance**(address) sens tokens from balance (for listeners)
+ - **send_from_acc**(address) sens tokens from your acc (for the users)
+ - **get_joined** gets available listeners (unless they lose tokens)
+ - **get_tx_to** or **get_tx_from** helps to verify if a listener has finished all the requests, and helps a listener to get unsent requests
 
 ## How it works
 
